@@ -12,11 +12,11 @@ Compose Design Challenge
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
-I usually dedicate saturdays towards personal learning so decided to g with compose today.
+I usually dedicate saturdays towards personal learning so decided to go with compose today.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/screenshot_3.png" width="260">
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/Screenshot_3.png" width="260">
 
 
 ## License
