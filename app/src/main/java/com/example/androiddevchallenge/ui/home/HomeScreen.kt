@@ -58,7 +58,7 @@ fun HomeScreen() {
         bottomBar = {
             BloomBottomNavigation()
         }
-    ) { 
+    ) {
         LazyColumn(
             modifier = Modifier
                 .padding(horizontal = 8.dp)
