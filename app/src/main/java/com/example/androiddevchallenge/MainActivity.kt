@@ -16,21 +16,26 @@
 package com.example.androiddevchallenge
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import androidx.core.view.WindowCompat
+import com.example.androiddevchallenge.ui.navigation.AppNavigator
+import com.example.androiddevchallenge.ui.theme.BloomTheme
+import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            MyTheme {
-                MyApp()
+            BloomTheme {
+                ProvideWindowInsets {
+                    MyApp()
+                }
             }
         }
     }
@@ -40,14 +45,14 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+        AppNavigator()
     }
 }
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
-    MyTheme {
+    BloomTheme {
         MyApp()
     }
 }
@@ -55,7 +60,7 @@ fun LightPreview() {
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DarkPreview() {
-    MyTheme(darkTheme = true) {
+    BloomTheme(darkTheme = true) {
         MyApp()
     }
 }

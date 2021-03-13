@@ -13,14 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.ui.components
 
-import androidx.compose.ui.graphics.Color
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.Image
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 
-val pink100 = Color(0xFFFFF1F1)
-val pink900 = Color(0xFF3F2C2C)
-val green300 = Color(0xFFB8C9B8)
-val green900 = Color(0xFF2D3B2D)
-val white150 = Color.White.copy(alpha = 0.15f)
-val white850 = Color.White.copy(alpha = 0.85f)
-val gray = Color(0xFF232323)
+@Composable
+fun BloomImage(
+    @DrawableRes imageRes: Int,
+    modifier: Modifier,
+    scale: ContentScale = ContentScale.None
+) {
+    Image(
+        painter = painterResource(id = imageRes), contentDescription = null,
+        modifier = modifier,
+        contentScale = scale
+    )
+}
