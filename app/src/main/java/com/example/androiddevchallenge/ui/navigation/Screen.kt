@@ -15,29 +15,4 @@
  */
 package com.example.androiddevchallenge.ui.navigation
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.Saver
-import androidx.compose.runtime.saveable.listSaver
-import androidx.compose.runtime.setValue
-
 enum class Screen { Splash, Account, Home }
-
-class AppState(
-    screen: Screen = Screen.Splash
-) {
-    var screen: Screen by mutableStateOf(screen)
-}
-
-private val Saver: Saver<AppState, *> = listSaver(
-    save = {
-        listOf(
-            it.screen.ordinal
-        )
-    },
-    restore = {
-        AppState(
-            screen = Screen.values()[it[0]]
-        )
-    }
-)

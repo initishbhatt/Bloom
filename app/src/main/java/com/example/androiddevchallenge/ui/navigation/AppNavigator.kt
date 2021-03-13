@@ -31,7 +31,7 @@ import com.example.androiddevchallenge.ui.home.HomeScreen
 import com.example.androiddevchallenge.ui.splash.SplashScreen
 
 @Composable
-fun AppNavigator(darkTheme: Boolean = false) {
+fun AppNavigator() {
     var screen: Screen by rememberSaveable { mutableStateOf(Screen.Splash) }
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
         Crossfade(screen) {
